@@ -10,7 +10,14 @@ export class Square extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    this.setState({ text: ':palm_tree:'})
+    if(this.props.id == this.props.treasureLocation) {
+      var newText = ':moneybag:'
+    } else if(this.props.id == this.props.bombLocation) {
+      var newText = ':bomb:'
+    } else {
+      var newText = ':palm_tree:'
+    }
+    this.setState({ text: newText })
   }
   render() {
     return (
