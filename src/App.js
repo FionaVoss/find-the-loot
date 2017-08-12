@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Square } from './Square';
+import {emojify} from 'react-emojione';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Find the Loot</h2>
+        <h1>
+        { emojify(':moneybag:') }
+        Find the Loot
+        { emojify(':moneybag:') }
+        </h1>
         <table style={{fontSize: 100}}>
           <tr>
             <Square/>
